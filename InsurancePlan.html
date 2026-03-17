@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MindCare — My Insurance Plans</title>
+  <style>
+    body, ul, li { margin: 0; padding: 0; list-style: none; }
+    body { font-family: Arial, sans-serif; background:#f4f7fb; color:#222; }
+
+    /* NAVBAR (same style as your template) */
+    nav { background-color: #333; padding: 10px; }
+    nav ul { display: flex; gap: 10px; align-items: center; }
+    nav li { margin-right: 8px; }
+    nav button { background:#333; color:white; padding:8px 14px; border:none; cursor:pointer; font-size:15px; }
+    nav button:hover { background:#444; }
+
+    .container { max-width: 1100px; margin: 20px auto; padding: 20px; }
+
+    h2 { margin-bottom: 15px; }
+
+    /* Cards */
+    .card { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); margin-bottom:20px; }
+
+    .plans-wrapper { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:20px; }
+
+    .plan-card { background:white; padding:18px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.08); transition:0.2s; }
+    .plan-card:hover { transform: scale(1.02); }
+
+    .plan-title { font-size:20px; font-weight:700; margin-bottom:6px; }
+    .company { font-size:14px; color:#555; margin-bottom:10px; }
+
+    .detail { font-size:14px; margin:6px 0; }
+
+    .btn { margin-top:12px; padding:10px 16px; background:#2b6ef6; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:600; }
+    .btn:hover { background:#1f55c9; }
+
+    .active-card { border-left:6px solid #2b6ef6; }
+    .active-label { background:#2b6ef6; color:white; padding:4px 10px; border-radius:6px; font-size:12px; display:inline-block; margin-bottom:8px; }
+
+    /* Form popup */
+    .popup { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); justify-content:center; align-items:center; }
+    .popup-box { background:white; padding:20px; border-radius:10px; width:360px; box-shadow:0 5px 20px rgba(0,0,0,0.25); }
+
+    label { font-weight:600; }
+    select { width:100%; padding:10px; margin:10px 0; border-radius:6px; border:1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (updated: Trends removed, Insurance added) -->
+  <nav>
+    <ul>
+      <li><button>Home</button></li>
+      <li><button>My Daily Log</button></li>
+      <li><button>AI Mood Analysis</button></li>
+      <li><button>My Recommendations</button></li>
+      <li><button>My Sessions</button></li>
+      <li><button>My Progress</button></li>
+      <li><button>My Insurance Plan</button></li>
+      <li><button>EMERGENCY SOS</button></li>
+      <li style="margin-left:auto"><button>Logout</button></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>My Insurance Plan</h2>
+
+    <!-- Active Insurance Card (user current plan) -->
+    <div class="card active-card">
+      <div class="active-label">Active Plan</div>
+      <div class="plan-title">Gold Health Plan</div>
+      <div class="company">Meghna Insurance</div>
+      <div class="detail"><strong>Coverage:</strong> Full mental health coverage</div>
+      <div class="detail"><strong>Premium:</strong> 3500 BDT/month</div>
+      <div class="detail"><strong>Active Until:</strong> 2025-12-31</div>
+    </div>
+
+
+    <h2>Available Plans</h2>
+    <div class="plans-wrapper">
+
+      <div class="plan-card">
+        <div class="plan-title">Basic Care Plan</div>
+        <div class="company">Meghna Insurance</div>
+        <div class="detail"><strong>Coverage:</strong> Limited mental health sessions</div>
+        <div class="detail"><strong>Premium:</strong> 1500 BDT/month</div>
+        <button class="btn" onclick="openPopup('Basic Care Plan')">Choose Plan</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">Silver Wellness Plan</div>
+        <div class="company">CityLife Insurance</div>
+        <div class="detail"><strong>Coverage:</strong> Normal therapy + emergency support</div>
+        <div class="detail"><strong>Premium:</strong> 2500 BDT/month</div>
+        <button class="btn" onclick="openPopup('Silver Wellness Plan')">Choose Plan</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">Diamond Premium Plan</div>
+        <div class="company">Guardian Insurance</div>
+        <div class="detail"><strong>Coverage:</strong> Full therapy, medication support, priority hotline</div>
+        <div class="detail"><strong>Premium:</strong> 4500 BDT/month</div>
+        <button class="btn" onclick="openPopup('Diamond Premium Plan')">Choose Plan</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- POPUP FORM -->
+  <div class="popup" id="popup">
+    <div class="popup-box">
+      <h3>Confirm Insurance Plan</h3>
+      <p id="selectedPlan" style="font-weight:700"></p>
+
+      <label>Activation Date</label>
+      <input type="date" id="activation" style="width:100%; padding:8px; border-radius:6px; border:1px solid #ccc; margin-bottom:10px;">
+
+      <button class="btn" onclick="confirmPlan()">Confirm Plan</button>
+      <button class="btn" style="background:#999; margin-top:10px;" onclick="closePopup()">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    function openPopup(planName) {
+      document.getElementById('selectedPlan').innerText = planName;
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function confirmPlan() {
+      alert('Insurance plan updated successfully! Connect this function to PATIENT_INSURANCE table.');
+      closePopup();
+    }
+  </script>
+
+</body>
+</html>

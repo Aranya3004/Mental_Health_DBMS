@@ -1,0 +1,92 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.buildpath
+.settings/
+nbproject/
+
+# PHP and Composer
+vendor/
+composer.phar
+composer.lock
+.phpunit.result.cache
+
+# Configuration Files (sensitive)
+config.local.php
+*.local.php
+
+# Database
+*.sql.gz
+*.sql.bak
+backup/
+
+# Logs
+*.log
+logs/
+error_log
+access_log
+
+# Temporary Files
+tmp/
+temp/
+cache/
+*.tmp
+
+# Uploaded Files (if you have an uploads folder)
+uploads/
+# Keep directory but ignore contents
+# uploads/*
+# !uploads/.gitkeep
+
+# Session Files
+sessions/
+*.sess
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Package Managers
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build Files
+dist/
+build/
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+
+# Sensitive Information
+passwords.txt
+credentials.txt
+secrets.txt
