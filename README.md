@@ -118,7 +118,7 @@ MentalHealth_DBMS/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/MentalHealth_DBMS.git
+git clone https://github.com/Aranya3004/Mental_Health_DBMS.git
 ```
 
 ### Step 2: Move to XAMPP Directory
