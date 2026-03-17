@@ -315,9 +315,9 @@ This is a **development version** with sample credentials. Before deploying to p
 
 For issues, questions, or suggestions:
 
-- **Email**: your.email@example.com
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/MentalHealth_DBMS/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/MentalHealth_DBMS/discussions)
+- **Email**: 2310189@iub.edu.bd
+- **Issues**: [GitHub Issues](https://github.com/Aranya3004/MentalHealth_DBMS/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Aranya3004/MentalHealth_DBMS/discussions)
 
 ## 🙏 Acknowledgments
 
@@ -333,6 +333,6 @@ For issues, questions, or suggestions:
 
 Made with ❤️ for mental health awareness
 
-[Report Bug](https://github.com/YOUR_USERNAME/MentalHealth_DBMS/issues) · [Request Feature](https://github.com/YOUR_USERNAME/MentalHealth_DBMS/issues)
+[Report Bug](https://github.com/Aranya3004/MentalHealth_DBMS/issues) · [Request Feature](https://github.com/Aranya3004/MentalHealth_DBMS/issues)
 
 </div>
